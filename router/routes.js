@@ -1,5 +1,3 @@
-// const app = require("express").Router();
-
 function apply(app){
 	app.get('/', (req, res) => {
 		res.send('Hey this is my API running 🥳')
