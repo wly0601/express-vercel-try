@@ -1,10 +1,15 @@
-const app = require("express").Router();
-app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
-})
+// const app = require("express").Router();
 
-app.get('/about', (req, res) => {
-  res.send('This is my about route..... ')
-})
+function apply(app){
+	app.get('/', (req, res) => {
+		res.send('Hey this is my API running 🥳')
+	})
 
-module.exports = app;
+	app.get('/about', (req, res) => {
+		res.send('This is my about route..... ')
+	})
+
+	return app
+}
+
+module.exports = { apply };

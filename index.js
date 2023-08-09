@@ -7,6 +7,5 @@ app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `)
 })
 
-app.use(router)
 
-module.exports = app
+module.exports = router.apply(app)
